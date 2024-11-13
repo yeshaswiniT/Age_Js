@@ -88,3 +88,58 @@ function generateMultiplicationTable() {
     multiplicationTableResult.innerHTML = table;
     multiplicationTableResult.style.color = "green";
 }
+
+
+
+function performCalculation() {
+    // Prompt user to enter the first number
+    const num1 = parseFloat(prompt("Enter the first number:"));
+
+    // Validate the first number
+    if (isNaN(num1)) {
+        alert("Please enter a valid number.");
+        return;
+    }
+
+    // Prompt user to enter the second number
+    const num2 = parseFloat(prompt("Enter the second number:"));
+
+    // Validate the second number
+    if (isNaN(num2)) {
+        alert("Please enter a valid number.");
+        return;
+    }
+
+    // Ask user to choose an operation
+    const operation = prompt("Choose an operation: +, -, *, /");
+
+    // Get the result of the operation
+    let result;
+
+    switch (operation) {
+        case "+":
+            result = num1 + num2;
+            break;
+        case "-":
+            result = num1 - num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "/":
+            if (num2 === 0) {
+                alert("Error: Division by zero is not allowed.");
+                return;
+            }
+            result = num1 / num2;
+            break;
+        default:
+            alert("Invalid operation. Please choose +, -, *, or /.");
+            return;
+    }
+
+    // Display the result
+    const calculationResult = document.getElementById("calculationResult");
+    calculationResult.textContent = `Result: ${num1} ${operation} ${num2} = ${result}`;
+    calculationResult.style.color = "green";
+}

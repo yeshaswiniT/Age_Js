@@ -1,0 +1,57 @@
+*{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+
+}
+
+body{
+
+    display: fiex;
+    align-items: start;
+    justify-content: center;
+    height: 80vh;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: whitesmoke;
+}
+
+   .container{
+        
+    text-align: center;
+    background-color: white;
+    padding: 20%;
+    border-radius: 8px;
+
+   }
+
+   h1 {
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+
+   button {
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+   }
+
+
+   button:hover {
+    background-color: #0056b3;
+}
+
+
+
+   #resultMessage {
+    font-size: 18px;
+    margin-top: 15px;
+    color: #333;
+}
